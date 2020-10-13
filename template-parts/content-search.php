@@ -17,19 +17,17 @@
 		<div class="entry-meta">
 			<?php
 			devnotes_posted_on();
-			devnotes_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php devnotes_post_thumbnail(); ?>
-
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php devnotes_entry_footer(); ?>
+	<footer class="entry-footer border-dotted">
+        <?php devnotes_continue_reading(); ?>
+        <div class="clear"></div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

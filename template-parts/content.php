@@ -23,13 +23,10 @@
 			<div class="entry-meta">
 				<?php
 				devnotes_posted_on();
-				devnotes_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php devnotes_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
