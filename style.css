@@ -73,11 +73,12 @@ main#primary {
 }
 
 article {
-    margin: 20px;
+    margin: 10px 20px;
 }
 
 article .entry-title {
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 2px;
 }
 article .entry-title a {
     color: #000;
@@ -142,9 +143,23 @@ footer.site-footer .site-info {
     text-decoration: underline;
 }
 
+#sidebar-wrapper .widget-title {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 15px;
+    background: #fcfcfc;
+    margin-bottom: 0;
+}
+
+#sidebar-wrapper .widget .textwidget,
+#sidebar-wrapper .widget .tagcloud,
+#sidebar-wrapper .widget .search-form {
+    padding: 8px;
+    background: #f1f1f1;
+}
+
 .col-container {
     display: table; /* Make the container element behave like a table */
-    width: 100%; /* Set full-width to expand the whole page */
 }
 .col {
     display: table-cell; /* Make elements inside the container behave like table cells */
