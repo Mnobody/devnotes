@@ -189,6 +189,10 @@ footer.site-footer .site-info {
     border-color: #000;
 }
 
+#disqus_thread {
+    margin: 10px 20px;
+}
+
 /* Accessibility
 --------------------------------------------- */
 
