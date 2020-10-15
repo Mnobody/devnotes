@@ -193,6 +193,38 @@ footer.site-footer .site-info {
     margin: 10px 20px;
 }
 
+.entry-meta-translation {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.entry-meta-translation span.badge {
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #BFBFBF;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.entry-meta-translation span.author {
+    margin-left: 5px;
+}
+
+.entry-meta-translation span.author,
+.entry-meta-translation span.author a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.entry-meta-translation span.author:hover,
+.entry-meta-translation span.author a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
 /* Accessibility
 --------------------------------------------- */
 
