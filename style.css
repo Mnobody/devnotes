@@ -225,6 +225,19 @@ footer.site-footer .site-info {
     text-decoration: underline;
 }
 
+span.critique {
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #BFBFBF;
+    padding: 4px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+span.critique:hover {
+    color: #555;
+}
+
 /* Accessibility
 --------------------------------------------- */
 
