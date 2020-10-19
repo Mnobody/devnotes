@@ -177,3 +177,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * @param WP_Query $query
+ */
+function add_book_critique_post_type($query) {
+    if (empty($query->query['post_type']) && !is_admin()) {
+        $query->set('post_type', array('post', 'book-critique'));
+    }
+}
+
+add_action('pre_get_posts', 'add_book_critique_post_type');
