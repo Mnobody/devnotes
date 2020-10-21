@@ -31,13 +31,13 @@
             if ( get_field('is_translation') ) :
         ?>
             <div class="entry-meta-translation">
-                <span class="badge">Tłumaczenie</span>
+                <span class="badge"> <?php echo __( 'Translation', 'devnotes' ); ?></span>
 
                 <span class="author">
                     <?php if(get_field('original_author_url')) : ?>
-                        <a href="<?php the_field('original_author_url') ?>"> Author oryginału: <?php the_field('original_author_title'); ?></a>
+                        <a href="<?php the_field('original_author_url') ?>"> <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?></a>
                     <?php else: ?>
-                        Author oryginału: <?php the_field('original_author_title'); ?>
+                        <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?>
                     <?php endif; ?>
                 </span>
             </div>

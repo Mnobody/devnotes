@@ -25,7 +25,7 @@
 				devnotes_posted_on();
 				?>
                 <?php if ( 'book-critique' === get_post_type() ) : ?>
-                    <span class="critique"> Book Critique </span>
+                    <span class="critique"> <?php echo __( 'Book Critique', 'devnotes' ); ?> </span>
                 <?php endif; ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
