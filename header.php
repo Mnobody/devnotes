@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -25,26 +26,37 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'devnotes' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-            ?>
-            <h1 class="site-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-            </h1>
+    <div class="container">
 
-            <?php
-			$devnotes_description = get_bloginfo( 'description', 'display' );
-			if ( $devnotes_description || is_customize_preview() ) :
-				?>
-				<div class="site-description">
-                    <span>
-                        <?php echo $devnotes_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-                    </span>
+        <header id="masthead" class="site-header">
+            <div class="site-branding">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <?php
+                        the_custom_logo();
+                        ?>
+                        <h1 class="site-title">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        </h1>
+                    </div>
+
+                    <div class="col-md-6 text-right">
+                        <?php
+                        $devnotes_description = get_bloginfo( 'description', 'display' );
+                        if ( $devnotes_description || is_customize_preview() ) :
+                            ?>
+                            <div class="site-description text-right">
+                        <span>
+                            <?php echo $devnotes_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                        </span>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-        <div class="clear"></div>
 
-	</header><!-- #masthead -->
+            </div><!-- .site-branding -->
+            <div class="clear"></div>
+
+        </header><!-- #masthead -->
+
+    </div>

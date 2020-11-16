@@ -142,6 +142,9 @@ add_action( 'widgets_init', 'devnotes_widgets_init' );
 function devnotes_scripts() {
 	wp_enqueue_style( 'devnotes-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+    wp_enqueue_style('devnotes-bootstrap-style', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
+    wp_enqueue_script('devnotes-bootstrap-js', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', array(), false, true );
+
 	wp_enqueue_script( 'devnotes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

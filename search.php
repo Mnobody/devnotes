@@ -10,47 +10,51 @@
 get_header();
 ?>
 
-    <main id="primary" class="site-main col-container">
+    <main id="primary" class="site-main container">
 
-        <div id="articles-wrapper" class="col">
+        <div class="row">
 
-            <?php if ( have_posts() ) : ?>
+            <div id="articles-wrapper" class="col-md-8">
 
-                <header class="page-header">
-                    <h1 class="page-title">
-                        <?php
-                        /* translators: %s: search query. */
-                        printf( esc_html__( 'Search Results for: %s', 'devnotes' ), '<span>' . get_search_query() . '</span>' );
-                        ?>
-                    </h1>
-                </header><!-- .page-header -->
+                <?php if ( have_posts() ) : ?>
 
-                <?php
-                /* Start the Loop */
-                while ( have_posts() ) :
-                    the_post();
+                    <header class="page-header">
+                        <h1 class="page-title">
+                            <?php
+                            /* translators: %s: search query. */
+                            printf( esc_html__( 'Search Results for: %s', 'devnotes' ), '<span>' . get_search_query() . '</span>' );
+                            ?>
+                        </h1>
+                    </header><!-- .page-header -->
 
-                    /**
-                     * Run the loop for the search to output the results.
-                     * If you want to overload this in a child theme then include a file
-                     * called content-search.php and that will be used instead.
-                     */
-                    get_template_part( 'template-parts/content', 'search' );
+                    <?php
+                    /* Start the Loop */
+                    while ( have_posts() ) :
+                        the_post();
 
-                endwhile;
+                        /**
+                         * Run the loop for the search to output the results.
+                         * If you want to overload this in a child theme then include a file
+                         * called content-search.php and that will be used instead.
+                         */
+                        get_template_part( 'template-parts/content', 'search' );
 
-                the_posts_pagination(array('mid_size' => 10));
+                    endwhile;
 
-            else :
+                    the_posts_pagination(array('mid_size' => 10));
 
-                get_template_part( 'template-parts/content', 'none' );
+                else :
 
-            endif;
-            ?>
-        </div>
+                    get_template_part( 'template-parts/content', 'none' );
 
-        <div id="sidebar-wrapper" class="col">
-            <?php get_sidebar(); ?>
+                endif;
+                ?>
+            </div>
+
+            <div id="sidebar-wrapper" class="col-md-4">
+                <?php get_sidebar(); ?>
+            </div>
+
         </div>
 	</main><!-- #main -->
 
