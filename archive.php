@@ -10,9 +10,9 @@
 get_header();
 ?>
 
-    <main id="primary" class="site-main container">
+    <main id="primary" class="site-main container flex-shrink-0">
 
-        <div id="articles-wrapper" class="col">
+        <div id="articles-wrapper" class="col-md-8">
 
             <?php if ( have_posts() ) : ?>
 
@@ -47,7 +47,7 @@ get_header();
             ?>
         </div>
 
-        <div id="sidebar-wrapper" class="col">
+        <div id="sidebar-wrapper" class="col-md-4">
             <?php get_sidebar(); ?>
         </div>
 	</main><!-- #main -->

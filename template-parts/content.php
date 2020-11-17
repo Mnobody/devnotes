@@ -24,26 +24,24 @@
 				<?php
 				devnotes_posted_on();
 				?>
+
+                <?php if ( get_field('is_translation') ) : ?>
+                    <div class="entry-meta-translation">
+                        <span class="badge bg-warning text-dark"> <?php echo __( 'Translation', 'devnotes' ); ?></span>
+
+                        <span class="author">
+                            <?php if(get_field('original_author_url')) : ?>
+                                <a href="<?php the_field('original_author_url') ?>"> <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?></a>
+                            <?php else: ?>
+                                <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?>
+                            <?php endif; ?>
+                        </span>
+                    </div>
+                <?php endif; ?>
+
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-        <?php
-            if ( get_field('is_translation') ) :
-        ?>
-            <div class="entry-meta-translation">
-                <span class="badge"> <?php echo __( 'Translation', 'devnotes' ); ?></span>
-
-                <span class="author">
-                    <?php if(get_field('original_author_url')) : ?>
-                        <a href="<?php the_field('original_author_url') ?>"> <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?></a>
-                    <?php else: ?>
-                        <?php echo __( 'Original Author:', 'devnotes' ); ?> <?php the_field('original_author_title'); ?>
-                    <?php endif; ?>
-                </span>
-            </div>
-        <?php
-            endif;
-        ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

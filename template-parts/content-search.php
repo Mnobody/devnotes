@@ -19,8 +19,17 @@
 			devnotes_posted_on();
 			?>
             <?php if ( 'book-critique' === get_post_type() ) : ?>
-                <span class="critique"> <?php echo __( 'Book Critique', 'devnotes' ); ?> </span>
+                <div class="entry-meta-book-critique">
+                    <span class="book-critique badge bg-warning text-dark"> <?php echo __( 'Book Critique', 'devnotes' ); ?> </span>
+                </div>
             <?php endif; ?>
+
+            <?php if ( get_field('is_translation') ) : ?>
+                <div class="entry-meta-translation">
+                    <span class="badge bg-warning text-dark"> <?php echo __( 'Translation', 'devnotes' ); ?></span>
+                </div>
+            <?php endif; ?>
+
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

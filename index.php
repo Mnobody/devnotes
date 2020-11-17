@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-    <main id="primary" class="site-main container">
+    <main id="primary" class="site-main container flex-shrink-0">
 
         <div class="row">
 

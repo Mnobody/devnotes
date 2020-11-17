@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area sticky-top bg-light rounded mt-2" style="top: 1rem;">
+<aside id="secondary" class="widget-area sticky-top rounded mt-2">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

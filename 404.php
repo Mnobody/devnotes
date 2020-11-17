@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-    <main id="primary" class="site-main container">
+    <main id="primary" class="site-main container flex-shrink-0">
 
         <div id="articles-wrapper" class="col">
             <section class="error-404 not-found" style="text-align: center;">

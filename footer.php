@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer mt-auto">
 		<div class="site-info">
             <p> © 2020<?php echo date('Y') !== '2020' ? ('-' . date('Y')) : ''; ?> <?php bloginfo( 'name' ); ?></p>
 		</div><!-- .site-info -->

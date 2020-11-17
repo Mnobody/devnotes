@@ -16,227 +16,150 @@ devnotes is based on Underscores https://underscores.me/, (C) 2012-2020 Automatt
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-/*html {*/
-/*    background-color: #242327;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    height: 100%;*/
-/*}*/
+html {
+    height: 100%!important;
+}
 
-/*body {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    height: 100%;*/
-/*    font-family: Arial, Helvetica, sans-serif;*/
-/*    color: #222222;*/
-/*}*/
+body {
+    background-color: #212b33;
+    color: #fff;
+    display: flex!important;
+    flex-direction: column!important;
+    height: 100%!important;
+}
 
-/*.clear {*/
-/*    clear: both;*/
-/*}*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    color: #fff;
+}
 
-/*#page {*/
-/*    width: 980px;*/
-/*    margin: 0 auto;*/
-/*}*/
+a {
+    color: #ffd800;
+    text-decoration: none;
+}
 
-/*#masthead {*/
-/*    width: 100%;*/
-/*    color: #fff;*/
-/*}*/
+a:hover {
+    color: #ffd800;
+    text-decoration: underline;
+}
 
-/*#masthead a {*/
-/*    color: #fff;*/
-/*    text-decoration: none;*/
-/*}*/
+ol, p, ul {
+    color: #DDE1E3;
+}
 
-/*#masthead .site-branding .site-title {*/
-/*    float: left;*/
-/*    width: 40%;*/
-/*}*/
+.site-header {
+    line-height: 1;
+    border-bottom: 1px solid #454545;
+    margin-bottom: 1rem;
+}
+.site-header .site-title a {
+    color: #fff;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+}
+.site-header .site-title a:hover {
+    text-decoration: none;
+}
 
-/*#masthead .site-branding .site-description {*/
-/*    float: right;*/
-/*    width: 35%;*/
-/*    font-style: italic;*/
-/*    font-size: 1.3em;*/
-/*    text-align: right;*/
-/*    margin-top: 1.5em;*/
-/*}*/
+.site-header .site-description {
+    line-height: 3.5;
+    color: #fff;
+}
 
-/*main#primary {*/
-/*    height: 100%;*/
-/*    overflow: hidden;*/
-/*    background: #fff;*/
-/*    border: 5px solid #444444;*/
-/*    padding: 15px;*/
-/*}*/
+/* Pagination */
+div.nav-links {
+    margin-bottom: 4rem;
+}
+div.nav-links .page-numbers {
+    border-radius: 2rem;
 
-/*article {*/
-/*    margin: 10px 20px;*/
-/*}*/
+    color: #ffd800;
+    border: 1px solid #ffd800;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
-/*article .entry-title {*/
-/*    margin-top: 5px;*/
-/*    margin-bottom: 2px;*/
-/*}*/
-/*article .entry-title a {*/
-/*    color: #000;*/
-/*    text-decoration: none;*/
-/*}*/
-/*article .entry-title a:hover {*/
-/*    text-decoration: underline;*/
-/*}*/
+div.nav-links .page-numbers.current {
+    color: #6c757d;
+    opacity: .65;
+    border-color: #6c757d;
+    pointer-events: none;
+}
 
-/*article .entry-meta {*/
-/*    font-size: 0.8em;*/
-/*    color: #555;*/
-/*}*/
+/*
+ * Blog posts
+ */
+#articles-wrapper article {
+    margin-bottom: 4rem;
+}
+#articles-wrapper article .entry-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+#articles-wrapper article .entry-title a {
+    color: #fff;
+    text-decoration: none;
+}
+#articles-wrapper article .entry-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
+}
 
-/*article .entry-footer.border-dotted {*/
-/*    border-bottom: 1px dotted #ccc;*/
-/*}*/
-/*article .entry-footer a.continue-reading {*/
-/*    color: #f26522;*/
-/*    font-size: 12px;*/
-/*    font-family: Verdana, Geneva, sans-serif;*/
-/*    font-weight: bold;*/
-/*    float: right;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-/*article .entry-footer span.tags-links {*/
-/*    font-style: italic;*/
-/*}*/
-/*article .entry-footer span.tags-links a {*/
-/*    color: #555;*/
-/*}*/
-/*article .entry-footer span.tags-links a:hover {*/
-/*    text-decoration: none;*/
-/*}*/
+#sidebar-wrapper #secondary {
+    background-color: #181F25;
+    top: 1rem;
+    margin-bottom: 1rem;
+}
+#sidebar-wrapper .widget {
+    padding: 1rem;
+}
 
-/*footer.site-footer {*/
-/*    width: 100%;*/
-/*    color: #fff;*/
-/*    margin: 20px 0;*/
-/*}*/
-/*footer.site-footer .site-info {*/
-/*    text-align: center;*/
-/*}*/
+.entry-meta-translation {
+    margin-bottom: 20px;
+}
 
-/*#articles-wrapper{*/
-/*    width: 660px;*/
-/*}*/
+.entry-meta-translation span.author,
+.entry-meta-translation span.author a {
+    padding: 4px;
+    font-size: 15px;
+}
 
-/*#sidebar-wrapper {*/
-/*    width: 320px;*/
-/*    background-color: #e7e7e7;*/
-/*    padding: 15px;*/
-/*}*/
+.entry-meta-book-critique {
+    margin-bottom: 20px;
+}
+span.book-critique {
+    /*margin-left: 5px;*/
+}
 
-/*#sidebar-wrapper .tag-cloud-link {*/
-/*    color: #555;*/
-/*    text-decoration: none;*/
-/*}*/
+#disqus_thread {
+    margin: 10px 20px;
+}
 
-/*#sidebar-wrapper .tag-cloud-link:hover {*/
-/*    color: #555;*/
-/*    text-decoration: underline;*/
-/*}*/
-
-/*#sidebar-wrapper .widget-title {*/
-/*    font-size: 18px;*/
-/*    font-weight: normal;*/
-/*    padding: 10px 15px;*/
-/*    background: #fcfcfc;*/
-/*    margin-bottom: 0;*/
-/*}*/
-
-/*#sidebar-wrapper .widget .textwidget,*/
-/*#sidebar-wrapper .widget .tagcloud,*/
-/*#sidebar-wrapper .widget .search-form {*/
-/*    padding: 8px;*/
-/*    background: #f1f1f1;*/
-/*}*/
-
-/*.col-container {*/
-/*    display: table; !* Make the container element behave like a table *!*/
-/*}*/
-/*.col {*/
-/*    display: table-cell; !* Make elements inside the container behave like table cells *!*/
-/*}*/
-
-/*.navigation.pagination {*/
-/*    text-align: center;*/
-/*    margin: 10px 0;*/
-/*    padding: 4px 10px;*/
-/*}*/
-
-/*.navigation.pagination .nav-links .page-numbers {*/
-/*    color: #666;*/
-/*    font-weight: bold;*/
-/*    text-decoration: none;*/
-/*    border: 1px solid #BFBFBF;*/
-/*    padding: 3px 5px;*/
-/*    margin: 2px;*/
-/*    font-size: 12px;*/
-/*}*/
-
-/*.navigation.pagination .nav-links .page-numbers:not(.dots):hover {*/
-/*    border-color: #000;*/
-/*}*/
-
-/*.navigation.pagination .nav-links .page-numbers.current {*/
-/*    border-color: #000;*/
-/*}*/
-
-/*#disqus_thread {*/
-/*    margin: 10px 20px;*/
-/*}*/
-
-/*.entry-meta-translation {*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 20px;*/
-/*}*/
-/*.entry-meta-translation span.badge {*/
-/*    color: #666;*/
-/*    font-weight: bold;*/
-/*    text-decoration: none;*/
-/*    border: 1px solid #BFBFBF;*/
-/*    padding: 4px;*/
-/*    font-size: 12px;*/
-/*}*/
-
-/*.entry-meta-translation span.author {*/
-/*    margin-left: 5px;*/
-/*}*/
-
-/*.entry-meta-translation span.author,*/
-/*.entry-meta-translation span.author a {*/
-/*    text-decoration: none;*/
-/*    color: #666;*/
-/*    font-weight: bold;*/
-/*    padding: 4px;*/
-/*    font-size: 12px;*/
-/*}*/
-
-/*.entry-meta-translation span.author:hover,*/
-/*.entry-meta-translation span.author a:hover {*/
-/*    color: #555;*/
-/*    text-decoration: underline;*/
-/*}*/
-
-/*span.critique {*/
-/*    color: #666;*/
-/*    font-weight: bold;*/
-/*    text-decoration: none;*/
-/*    border: 1px solid #BFBFBF;*/
-/*    padding: 4px;*/
-/*    font-size: 12px;*/
-/*    margin-left: 5px;*/
-/*}*/
-/*span.critique:hover {*/
-/*    color: #555;*/
-/*}*/
+/*
+ * Footer
+ */
+.site-footer {
+    padding: 2.5rem 0;
+    color: #727272;
+    text-align: center;
+    background-color: #17222A;
+    border-top: .05rem solid #454545;
+}
+.site-footer p:last-child {
+    margin-bottom: 0;
+}
 
 /* Accessibility
 --------------------------------------------- */
@@ -278,102 +201,4 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
     outline: 0;
-}
-
-
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-
-
-.site-header {
-    line-height: 1;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 1rem;
-}
-.site-header .site-title a {
-    color: #212529;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-    font-size: 2.25rem;
-}
-.site-header .site-title a:hover {
-    text-decoration: none;
-}
-
-.site-header .site-description {
-    line-height: 3.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-}
-
-/* Pagination */
-div.nav-links {
-    margin-bottom: 4rem;
-}
-div.nav-links .page-numbers {
-    border-radius: 2rem;
-
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-div.nav-links .page-numbers.current {
-    color: #6c757d;
-    opacity: .65;
-    border-color: #6c757d;
-    pointer-events: none;
-}
-
-/*
- * Blog posts
- */
-#articles-wrapper article {
-    margin-bottom: 4rem;
-}
-#articles-wrapper article .entry-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-}
-#articles-wrapper article .entry-title a {
-    color: #212529;
-    text-decoration: none;
-}
-#articles-wrapper article .entry-meta {
-    margin-bottom: 1.25rem;
-    color: #727272;
-}
-
-#sidebar-wrapper .widget {
-    padding: 1rem;
-}
-
-/*
- * Footer
- */
-.site-footer {
-    padding: 2.5rem 0;
-    color: #727272;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-}
-.site-footer p:last-child {
-    margin-bottom: 0;
 }
